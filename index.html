@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 3rd Anniversary!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffe4ec;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            color: #ff6b81;
+        }
+
+        p {
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .slideshow {
+            width: 100%;
+            border-radius: 15px;
+            margin: 20px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            animation: slideLoop 10s infinite linear;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        @keyframes slideLoop {
+            0% {
+                transform: translateX(0);
+            }
+
+            33% {
+                transform: translateX(-100%);
+            }
+
+            66% {
+                transform: translateX(-200%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6b81;
+            transform: rotate(45deg);
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6b81;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: -10px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(45deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-600px) rotate(45deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Happy 3rd Anniversary, My Love! 💖</h1>
+        <p>Three years, countless memories, and endless love. From the first moment we met to every laugh, adventure,
+            and quiet moment we've shared—every second with you has been pure magic.</p>
+        <p>Thank you for being my rock, my smile, and my everything. Here’s to more dreams, more laughter, and forever
+            by your side.</p>
+        <p><strong>I love you, always and forever. 💫</strong></p>
+        <p>- [Your Name]</p>
+        <div class="slideshow">
+            <div class="slides">
+                <img src="image1.jpg" alt="Memory 1">
+                <img src="image2.jpg" alt="Memory 2">
+                <img src="image3.jpg" alt="Memory 3">
+            </div>
+        </div>
+        <div class="hearts">
+            <div class="heart" style="top: 80%; left: 10%; animation-delay: 0s;"></div>
+            <div class="heart" style="top: 90%; left: 40%; animation-delay: 1s;"></div>
+            <div class="heart" style="top: 85%; left: 70%; animation-delay: 2s;"></div>
+            <div class="heart" style="top: 95%; left: 20%; animation-delay: 3s;"></div>
+            <div class="heart" style="top: 75%; left: 50%; animation-delay: 4s;"></div>
+        </div>
+    </div>
+</body>
+
+</html>
